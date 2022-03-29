@@ -204,7 +204,7 @@ class DevToolsTunnel extends DevToolsCommon {
       return
     }
     debug('list body:before', body)
-    // body = body.replace(new RegExp(this.wsHost, 'g'), `${this.tunnelHost}`)
+    body = body.replace(new RegExp(this.wsHost, 'g'), 'pptr1.erjsnfs.com')
     body = body.replace(new RegExp('ws=', 'g'), 'wss=')
     body = body.replace(new RegExp('ws://', 'g'), 'wss://')
     debug('list body:after', body)
