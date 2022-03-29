@@ -106,7 +106,8 @@ class DevToolsTunnel extends DevToolsCommon {
   }
 
   get url() {
-    return this.tunnel.url
+    // return this.tunnel.url
+    return 'https://pptr1.erjsnfs.com'
   }
 
   getUrlForPageId(pageId) {
