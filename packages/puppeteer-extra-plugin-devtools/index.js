@@ -100,7 +100,7 @@ class Plugin extends PuppeteerExtraPlugin {
    * // Browser 2's devtools frontend can be found at: https://devtools-tunnel-pp83sdi4jo.localtunnel.me
    */
   async createTunnel(browser) {
-    ow(browser, ow.object.hasKeys('wsEndpoint'))
+    // ow(browser, ow.object.hasKeys('wsEndpoint'))
 
     const wsEndpoint = browser.wsEndpoint()
     if (!this._browserSessions[wsEndpoint]) {
@@ -110,9 +110,9 @@ class Plugin extends PuppeteerExtraPlugin {
       ).create()
     }
 
-    this._printGeneratedPasswordWhenNotOverridden(
-      this._browserSessions[wsEndpoint].url
-    )
+    // this._printGeneratedPasswordWhenNotOverridden(
+    //   this._browserSessions[wsEndpoint].url
+    // )
     this.debug('createTunnel', {
       wsEndpoint,
       sessions: Object.keys(this._browserSessions)
