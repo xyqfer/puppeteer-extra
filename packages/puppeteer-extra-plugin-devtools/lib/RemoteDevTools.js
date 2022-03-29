@@ -67,7 +67,7 @@ class DevToolsLocal extends DevToolsCommon {
   }
 
   getUrlForPageId(pageId) {
-    return `${this.url}/devtools/inspector.html?ws=${this.wsHost}:${this.wsPort}/devtools/page/${pageId}`
+    return `${this.url}/devtools/inspector.html?wss=pptr1.erjsnfs.com/devtools/page/${pageId}`
   }
 }
 
