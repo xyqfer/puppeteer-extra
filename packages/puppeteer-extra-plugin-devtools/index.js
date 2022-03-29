@@ -101,6 +101,7 @@ class Plugin extends PuppeteerExtraPlugin {
       wsEndpoint,
       sessions: Object.keys(this._browserSessions)
     })
+    console.log(wsEndpoint)
     return this._browserSessions[wsEndpoint]
   }
 
