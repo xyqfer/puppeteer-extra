@@ -34,7 +34,7 @@ const ow = require('ow')
 
  const httpProxy = require("http-proxy");
  const host = "0.0.0.0";
- const port = 8080;
+ const port = 3389;
 
  async function createServer(WSEndPoint, host, port) {
    await httpProxy
