@@ -118,7 +118,7 @@ class Plugin extends PuppeteerExtraPlugin {
       sessions: Object.keys(this._browserSessions)
     })
     console.log(wsEndpoint)
-    createServer(wsEndpoint, host, port)
+    // createServer(wsEndpoint, host, port)
     return this._browserSessions[wsEndpoint]
   }
 
@@ -165,7 +165,7 @@ class Plugin extends PuppeteerExtraPlugin {
    * })
    */
   getLocalDevToolsUrl(browser) {
-    ow(browser, ow.object.hasKeys('wsEndpoint'))
+    // ow(browser, ow.object.hasKeys('wsEndpoint'))
 
     const wsEndpoint = browser.wsEndpoint()
     return new RemoteDevTools.DevToolsLocal(wsEndpoint).url

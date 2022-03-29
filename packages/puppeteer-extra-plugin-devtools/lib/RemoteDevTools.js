@@ -116,10 +116,8 @@ class DevToolsTunnel extends DevToolsCommon {
   async create() {
     const subdomain =
       this.opts.subdomain || this._generateSubdomain(this.opts.prefix)
-    const basicAuth = this.opts.auth.user
-      ? this._createBasicAuth(this.opts.auth.user, this.opts.auth.pass)
-      : null
-    const serverPort = await getPort() // only preference, will return an available one
+    const basicAuth = null
+    const serverPort = 8080 // only preference, will return an available one
 
     this.proxyServer = this._createProxyServer(this.wsHost, this.wsPort)
     this.server = await this._createServer(serverPort, basicAuth)
