@@ -100,7 +100,7 @@ class Plugin extends PuppeteerExtraPlugin {
    * // Browser 2's devtools frontend can be found at: https://devtools-tunnel-pp83sdi4jo.localtunnel.me
    */
   async createTunnel(browser) {
-    ow(browser, ow.object.hasKeys('wsEndpoint'))
+    // ow(browser, ow.object.hasKeys('wsEndpoint'))
 
     const wsEndpoint = browser.wsEndpoint()
     if (!this._browserSessions[wsEndpoint]) {
@@ -141,8 +141,8 @@ class Plugin extends PuppeteerExtraPlugin {
    * })
    */
   setAuthCredentials(user, pass) {
-    ow(user, ow.string.nonEmpty)
-    ow(pass, ow.string.nonEmpty)
+    // ow(user, ow.string.nonEmpty)
+    // ow(pass, ow.string.nonEmpty)
     this.opts.auth = { user, pass }
     this.debug('updated credentials', this.opts.auth)
     return this
@@ -235,7 +235,7 @@ class Tunnel extends RemoteDevTools.DevToolsTunnel {
    * // => https://devtools-tunnel-bmkjg26zmr.localtunnel.me/devtools/inspector.html?ws(...)
    */
   getUrlForPage(page) {
-    ow(page, ow.object.hasKeys('_target._targetInfo.targetId'))
+    // ow(page, ow.object.hasKeys('_target._targetInfo.targetId'))
     const pageId = page._target._targetInfo.targetId
     return super.getUrlForPageId(pageId)
   }
