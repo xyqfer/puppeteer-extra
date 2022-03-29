@@ -21,9 +21,9 @@ const urlParse = require('url-parse')
  */
 class DevToolsCommon {
   constructor(webSocketDebuggerUrl, opts = {}) {
-    ow(webSocketDebuggerUrl, ow.string)
-    ow(webSocketDebuggerUrl, ow.string.includes('ws://'))
-    ow(opts, ow.object.plain)
+    // ow(webSocketDebuggerUrl, ow.string)
+    // ow(webSocketDebuggerUrl, ow.string.includes('ws://'))
+    // ow(opts, ow.object.plain)
     this.opts = opts
 
     this.wsUrl = webSocketDebuggerUrl
