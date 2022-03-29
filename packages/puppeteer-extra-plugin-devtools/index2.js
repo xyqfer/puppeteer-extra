@@ -10,7 +10,7 @@ puppeteer
   .then(async browser => {
     console.log('Start')
     const tunnel = await devtools.createTunnel(browser)
-    // console.log(tunnel.url)
+    console.log(tunnel.url)
 
     const page = await browser.newPage()
     await page.goto('https://example.com')
