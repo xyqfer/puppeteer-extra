@@ -111,7 +111,7 @@ class DevToolsTunnel extends DevToolsCommon {
   }
 
   getUrlForPageId(pageId) {
-    return `https://${this.tunnelHost}/devtools/inspector.html?wss=${this.tunnelHost}/devtools/page/${pageId}`
+    return `https://${this.tunnelHost}/devtools/inspector.html?wss=pptr1.erjsnfs.com/devtools/page/${pageId}`
   }
 
   async create() {
