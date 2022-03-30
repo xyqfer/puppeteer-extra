@@ -15,7 +15,7 @@ puppeteer
 
     const page = await browser.newPage()
     const mobile = puppeteer.devices['iPhone X']
-    page.emulate(mobile)
+    await page.emulate(mobile)
     await page.goto('https://isawa.badambiz.com/html/sawa-card-challenge/ksa/?lan=ar')
     console.log('All setup.')
   })
