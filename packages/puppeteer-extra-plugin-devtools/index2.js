@@ -28,6 +28,6 @@ puppeteer
       },
     }
     await page.emulate(mobile)
-    await page.goto('https://isawa.badambiz.com/html/sawa-card-challenge/ksa/?lan=ar')
+    await page.goto('https://example.com')
     console.log('All setup.')
   })
