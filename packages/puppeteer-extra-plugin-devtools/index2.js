@@ -5,7 +5,8 @@ puppeteer.use(devtools)
 puppeteer
   .launch({ headless: true, defaultViewport: {
     "width": 375,
-    "height": 712
+    "height": 712,
+    isMobile: true,
   }, args: ['--no-sandbox', '--disable-setuid-sandbox'], })
   .then(async browser => {
     console.log('Start')
