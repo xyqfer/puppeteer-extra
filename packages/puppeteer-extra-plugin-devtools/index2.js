@@ -13,6 +13,8 @@ puppeteer
     console.log(tunnel.url)
 
     const page = await browser.newPage()
-    await page.goto('https://example.com')
+    const mobile = puppeteer.devices['iPhone X']
+    page.emulate(mobile)
+    await page.goto('https://isawa.badambiz.com/html/sawa-card-challenge/ksa/?lan=ar')
     console.log('All setup.')
   })
